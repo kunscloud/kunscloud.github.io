@@ -1,14 +1,238 @@
-<!DOCTYPE html>
-<html>
-<head>
- <title>My Homework</title>
- <script src="homework.js"></script>
-</head>
-<body>
-  <h1>Please come to play with me~</h1>
-  <img src="free love合照.jpg">
-  <p id="demo">Guess who is the elder one between them?</p>
-  <p id="demo">We can named them the black-haired boy and the red-haired boy.</p>
-  <button onclick="writeAnswer()">Write your answer here.</button>
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 国内 Staticfile CDN 上的 Bootstrap5 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
+<script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
+<link href="style.css" rel="stylesheet">
+<script src="NCT.js"></script>
+    <title>To The World,This is NCT!</title>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+     <div class="container-fluid">
+       <a class="navbar-brand" href="#"><img src="img/logo.jpg"></a>
+       <span class="badge bg-light text-dark">NCT</span>
+       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto">
+         <li class="nav-item">
+           <a class="nav-link active" aria-current="page" href="#shouye">首页</a>
+        </li>
+       <li class="nav-item">
+       <a class="nav-link" href="#introduction">分队介绍</a>
+         </li>
+       <li class="nav-item dropdown">
+         <a class="nav-link" href="#MV">MV</a>
+         </li>
+       <li class="nav-item">
+   <a class="nav-link" href="#face">小游戏</a>
+       </li>
+     </ul>
+       </div>
+       </div>
+       </nav>
+<!--Image Slider-->
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/NCT127.jpg" class="d-block w-100">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>NCT 127日本东京巨蛋公演DAY2</h5>
+        <p>5月28日~29日举行的东京巨蛋公演共吸引了14万名观众，令人感受到火热人气与大势力量</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/NCTDREAM.jpg" class="d-block w-100">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>NCT DREAM正规二辑后续专辑《Beatbox》</h5>
+        <p>NCT DREAM 5月30日回归倒计时，“像礼物一样的专辑，期待与歌迷们的见面”</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/WAYV.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>WayV-Talk接力直播惊喜开播</h5>
+        <p>威神V成员的直播笑不活了？这么有趣的事情当然要多多安排！</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/NCT.jpg" class="d-block w-100">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>CT明朗运动会火热进行</h5>
+        <p>夏日So Hot！我们可是不会输的NCT！</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!--- Jumbotron -->
+<div class="container-fluid" id="shouye">
+	<div class="row jumbotron">
+		<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
+			<p class="lead">NCT是韩国SM娱乐有限公司于2016年起推出的韩国流行乐男子演唱组合，取“Neo Culture Technology” 的首字母从而组成“NCT”。该组合人数没有限制，可以自由增减成员，现以文泰一、徐英浩、李泰容、中本悠太、钱锟、金道英、李永钦、郑在玹、董思成、金廷祐、李马克、黄仁俊、李帝努、李楷灿、罗渽民、钟辰乐、朴志晟、肖俊、黄冠亨、刘扬扬、大崎将太郎、郑成灿22位正式成员的形式展开活动，分为NCT U、NCT 127、NCT DREAM、威神V四个队伍 。</p>
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
+		<a href="https://baike.baidu.com/item/NCT/5385499?fr=aladdin"><button type="button" class="btn btn-outline-secondary btn-lg">简介</button></a>
+</div>
+</div>
+</div>
+
+<!--introduction-->
+<div class="container-fluid" id="introduction">
+<div class="row text-center" >
+<h5 class="bg-secondary p-2 text-white bg-opacity-50">NCT分队简介</h5>
+</div>
+</div>
+
+<!--card-->
+<div class="card mb-3">
+  <img src="img/127.jpg" class="card-img-top" >
+  <div class="card-body">
+    <h5 class="card-title">NCT 127</h5>
+    <p class="card-text">NCT 127是NCT的首尔小分队，先后由文泰一、李楷灿、李马克、郑在玹、李泰容、中本悠太、董思成、金道英、徐英浩、金廷祐十位成员组成，127代表着首尔的经度。</p>
+  <a href="https://baike.baidu.com/item/NCT%20127/19781120?fromtitle=NCT127&fromid=19811457&fr=aladdin"><button type="button" class="btn btn-secondary">点击查看详细资料</button></a>
+  </div>
+</div>
+<div class="card mb-3">
+  <img src="img/DREAM.jpg" class="card-img-top" >
+  <div class="card-body">
+    <h5 class="card-title">NCT DREAM</h5>
+    <p class="card-text">NCT DREAM是NCT的10代青少年联合小分队，由李马克、黄仁俊、李帝努、李楷灿、罗渽民、钟辰乐、朴志晟七位成员组成。</p>
+  <a href="https://baike.baidu.com/item/NCT%20DREAM/19910246?fr=aladdin"><button type="button" class="btn btn-secondary">点击查看详细资料</button></a>
+  </div>
+</div>
+<div class="card mb-3">
+  <img src="img/VISION.jpg" class="card-img-top" >
+  <div class="card-body">
+    <h5 class="card-title">Way V(威神V)</h5>
+    <p class="card-text">威神V(WayV)是NCT的中国小分队，由钱锟、李永钦、董思成、肖俊、黄冠亨、刘扬扬六位成员组成，由SM Entertainment制作、中国LABEL V推出。</p>
+  <a href="https://baike.baidu.com/item/%E5%A8%81%E7%A5%9EV/23229963?fr=aladdin"><button type="button" class="btn btn-secondary">点击查看详细资料</button></a>
+  </div>
+</div>
+<div class="card mb-3">
+  <img src="img/NCTU.jpg" class="card-img-top" >
+  <div class="card-body">
+    <h5 class="card-title">NCT U</h5>
+    <p class="card-text">NCT U是NCT的先行分队，该组合最初没有固定成员，按照歌曲风格确定组合成员。</p>
+  <a href="https://baike.baidu.com/item/NCT%20U/19508557?fr=aladdin"><button type="button" class="btn btn-secondary">点击查看详细资料</button></a>
+  </div>
+</div>
+
+<!--music video-->
+<div class="container-fluid" id="MV">
+<div class="row text-center" >
+<h5 class="bg-secondary p-2 text-white bg-opacity-50">一些惊艳的music video</h5>
+</div>
+</div>
+
+<!--media object-->
+<ul class="list-unstyled">
+  <li class="media">
+    <img src="img/miracle.jpg" class="d-block w-100" >
+    <div class="media-body">
+    <a href="https://www.bilibili.com/video/BV1JM4y1w7kZ?spm_id_from=333.337.search-card.all.click">  <h5 class="mt-0 mb-1">Micacle</h5></a>
+      <p>威神V</p>
+    </div>
+  </li>
+  <li class="media my-4">
+    <img src="img/universe.jpg" class="d-block w-100" >
+    <div class="media-body">
+      <a href="https://www.bilibili.com/video/BV1s44y1a7M3?spm_id_from=333.337.search-card.all.click"> <h5 class="mt-0 mb-1">Let's Play Ball</h5></a>
+      <p>NCT U</p>
+    </div>
+  </li>
+  <li class="media">
+    <img src="img/beatbox.jpg" class="d-block w-100" >
+    <div class="media-body">
+    <a href="https://www.bilibili.com/video/BV1MS4y1B7JS?spm_id_from=333.337.search-card.all.click"> <h5 class="mt-0 mb-1">Beatbox</h5></a>
+      <p>NCT DREAM</p>
+    </div>
+  </li>
+  <li class="media">
+    <img src="img/sticker.jpg" class="d-block w-100" >
+    <div class="media-body">
+  <a href="https://www.bilibili.com/video/BV1Mv411A7Fs?spm_id_from=333.337.search-card.all.click"> <h5 class="mt-0 mb-1">Sticker</h5></a>
+      <p>NCT 127</p>
+    </div>
+  </li>
+</ul>
+
+<!--face-->
+<div class="container-fluid" id="face">
+<div class="row text-center" >
+<h5 class="bg-secondary p-2 text-white bg-opacity-50">这些都是谁？来猜猜看！</h5>
+</div>
+</div>
+
+<!--game-->
+<img src="img/nctpeople.jpg" class="d-block w-100">
+  <h5>请从左到右依次说出他们的名字（全名）</h5>
+  <button onclick="writeAnswer()">请在此输入你的回答</button>
+
+<!--- Footer -->
+<footer>
+	<div class="container-fluid">
+		<div class="row text-center">
+      <div class="col-md-4">
+        <hr class="light">
+        <h5>Twitter</h5>
+        <hr class="light">
+        <p>NCT:@NCTsmtown</p>
+        <p>NCT 127:@NCTsmtown_127</p>
+        <p>NCT DREAM:@NCTsmtown_DREAM</p>
+        <p>WAY V:@WayV_official</p>
+      </div>
+			<div class="col-md-4">
+				<hr class="light">
+				<h5>Instagram</h5>
+				<hr class="light">
+        <p>NCT:@nct</p>
+        <p>NCT 127:@nct127</p>
+        <p>NCT DREAM:@nct_dream</p>
+        <p>WAY V:@wayvofficial</p>
+			</div>
+			<div class="col-md-4">
+				<hr class="light">
+				<h5>Weibo</h5>
+				<hr class="light">
+        <p>NCT:@NCT_official</p>
+        <p>NCT 127:@NCT127</p>
+        <p>NCT DREAM:@NCT_DREAM</p>
+        <p>WAY V:@WayV_official</p>
+			</div>
+			<div class="col-12">
+				<hr class="light">
+				<h5>&copy; w3newbie.com</h5>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+ </body>
 </html>
